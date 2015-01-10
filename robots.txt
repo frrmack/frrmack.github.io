@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://frrmack.github.io/sitemap.xml 
