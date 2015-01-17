@@ -4,7 +4,7 @@
   <title><![CDATA[The Big Datawski]]></title>
   <link href="http://frrmack.github.io/atom.xml" rel="self"/>
   <link href="http://frrmack.github.io/"/>
-  <updated>2015-01-16T19:55:03-05:00</updated>
+  <updated>2015-01-16T20:00:27-05:00</updated>
   <id>http://frrmack.github.io/</id>
   <author>
     <name><![CDATA[Irmak Sirer]]></name>
@@ -18,67 +18,7 @@
     <link href="http://frrmack.github.io/blog/2015/01/16/testing-ipython/"/>
     <updated>2015-01-16T19:53:38-05:00</updated>
     <id>http://frrmack.github.io/blog/2015/01/16/testing-ipython</id>
-    <content type="html"><![CDATA[<p>&lt;!DOCTYPE html>
-<html>
-<head></p>
-
-<p><meta charset="utf-8" />
-<title>Notebook</title></p>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-
-
-<p><link rel="stylesheet" href="custom.css"></p>
-
-<!-- Loading mathjax macro -->
-
-
-<!-- Load mathjax -->
-
-
-<pre><code>&lt;script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"&gt;&lt;/script&gt;
-&lt;!-- MathJax configuration --&gt;
-&lt;script type="text/x-mathjax-config"&gt;
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true,
-        processEnvironments: true
-    },
-    // Center justify equations in code and markdown cells. Elsewhere
-    // we use CSS to left justify single line equations in code cells.
-    displayAlign: 'center',
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}},
-        linebreaks: { automatic: true }
-    }
-});
-&lt;/script&gt;
-&lt;!-- End of mathjax configuration --&gt;
-</code></pre>
-
-<p></head>
-<body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <content type="html"><![CDATA[<p>  <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container"></p>
 
 <div class="cell border-box-sizing text_cell rendered">
@@ -645,9 +585,7 @@ In&nbsp;[]:
 <pre><code>&lt;/div&gt;
 </code></pre>
 
-<p>  </div>
-</body>
-</html></p>
+<p>  </div></p>
 ]]></content>
   </entry>
   
