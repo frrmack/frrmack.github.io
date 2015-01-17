@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Cool-stuff - The Big Datawski</title>
+  <title>Testing Ipython - The Big Datawski</title>
   <meta name="author" content="Irmak Sirer">
 
   
-  <meta name="description" content="Cool-stuff Jan 10th, 2015 7:09 pm This is a page for cool stuff. Jan 10th, 2015 7:09 pm Tweet Recent Posts Testing Ipython This Blogging Thing Is &hellip;">
+  <meta name="description" content="&lt;!DOCTYPE html> Notebook &lt;script src=&#8221;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&#8221;&gt;&lt;/script&gt;
+&lt;!&#8211; MathJax &hellip;&#8221;>
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://frrmack.github.io/cool-stuff">
+  <link rel="canonical" href="http://frrmack.github.io/blog/2015/01/16/testing-ipython">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="The Big Datawski" type="application/atom+xml">
@@ -1734,44 +1735,693 @@ div#notebook {
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Cool-stuff</h1>
-    <p class="meta">
-
-
-
-
-<time class='entry-date' datetime='2015-01-10T19:09:00-05:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>7:09 pm</span></time></p>
-  </header>
-  
-  <p>This is a page for cool stuff.</p>
-
-  
-    <footer>
+    
+      <h1 class="entry-title">Testing Ipython</h1>
+    
+    
       <p class="meta">
         
-        
 
 
 
 
-<time class='entry-date' datetime='2015-01-10T19:09:00-05:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>7:09 pm</span></time>
+<time class='entry-date' datetime='2015-01-16T19:53:38-05:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>7:53 pm</span></time>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>&lt;!DOCTYPE html>
+<html>
+<head></p>
+
+<p><meta charset="utf-8" />
+<title>Notebook</title></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+
+
+<p><link rel="stylesheet" href="custom.css"></p>
+
+<!-- Loading mathjax macro -->
+
+
+<!-- Load mathjax -->
+
+
+<pre><code>&lt;script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"&gt;&lt;/script&gt;
+&lt;!-- MathJax configuration --&gt;
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true }
+    }
+});
+&lt;/script&gt;
+&lt;!-- End of mathjax configuration --&gt;
+</code></pre>
+
+<p></head>
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container"></p>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="download-the-data">Download the data</h2>
+</div>
+</div>
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">mta</span>
+
+<span class="n">mta</span><span class="o">.</span><span class="n">get_turnstile_data</span><span class="p">(</span><span class="n">num_files</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
+                       <span class="n">data_url</span><span class="o">=</span><span class="s">&quot;http://web.mta.info/developers/turnstile.html&quot;</span><span class="p">,</span>
+                       <span class="n">destination</span><span class="o">=</span><span class="s">&#39;./data/&#39;</span><span class="p">,</span>
+                       <span class="n">start_from_id</span> <span class="o">=</span> <span class="mi">130105</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="get-the-data-out-of-the-csvs">Get the data out of the csvs</h2>
+</div>
+</div>
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">filenames</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">get_glob</span><span class="p">()</span>
+<span class="n">ts_data</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">extract_turnstile_data_from_csvs</span><span class="p">(</span><span class="n">filenames</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">ts_data</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="get-turnstile-time-series">Get turnstile time series</h2>
+</div>
+</div>
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre> <span class="n">turnstile_timeseries</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">get_turnstile_timeseries</span><span class="p">(</span><span class="n">ts_data</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="collapse-turnstiles-to-booth-remotes">Collapse turnstiles to booth-remotes</h2>
+</div>
+</div>
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># collapse the data to booth-remotes</span>
+<span class="c">#[takes a minute but not as long as the day count extraction]</span>
+<span class="n">boothremote_timeseries</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">collapse_data_to_booth_remote</span><span class="p">(</span><span class="n">turnstile_timeseries</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># how many boothremotes are there?</span>
+<span class="k">print</span> <span class="s">&#39;number of boothremotes: &#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">boothremote_timeseries</span><span class="p">)</span> 
+
+<span class="c"># what does ONE boothremote look like?</span>
+<span class="n">br_id</span><span class="p">,</span> <span class="n">br_counts</span> <span class="o">=</span> <span class="n">boothremote_timeseries</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+<span class="k">print</span> <span class="s">&#39;br id of first booth remote: &#39;</span><span class="p">,</span><span class="n">br_id</span>
+<span class="k">print</span> <span class="s">&#39;daily counts:&#39;</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">br_counts</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="plot">PLOT</h1>
+</div>
+</div>
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="c"># plot the turnstile entry counts per day for one boothremote</span>
+<span class="n">dates</span><span class="p">,</span><span class="n">counts</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">dates_and_counts</span><span class="p">(</span><span class="n">br_counts</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dates</span><span class="p">,</span><span class="n">counts</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">counts_by_week</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">reshape_flat_counts_to_weekly</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+<span class="c">#print counts_by_week</span>
+
+<span class="k">for</span> <span class="n">week</span> <span class="ow">in</span> <span class="n">counts_by_week</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">week</span><span class="p">)</span>
+    
+<span class="n">xl</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;Day of the week&#39;</span><span class="p">)</span>
+<span class="n">yl</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;Number of turnstile entries&#39;</span><span class="p">)</span>
+<span class="n">xt</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">7</span><span class="p">),[</span><span class="s">&#39;S&#39;</span><span class="p">,</span><span class="s">&#39;S&#39;</span><span class="p">,</span><span class="s">&#39;M&#39;</span><span class="p">,</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;W&#39;</span><span class="p">,</span><span class="s">&#39;R&#39;</span><span class="p">,</span><span class="s">&#39;F&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="function-for-rainbow-weekly-ridership-curves">Function for rainbow weekly ridership curves</h3>
+</div>
+</div>
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># let&#39;s make a function that does everything we just did to make this &quot;rainbow line&quot; plot</span>
+<span class="c"># try it out on a random boothremote</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="n">br</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">boothremote_timeseries</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c"># what station is that anyway?</span>
+<span class="c"># make the station key</span>
+<span class="n">station_key</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">create_booth_remote_station_key</span><span class="p">(</span><span class="s">&#39;data/turnstile_key.csv&#39;</span><span class="p">)</span>
+<span class="c">#print station_key[br_id]</span>
+
+<span class="n">mta</span><span class="o">.</span><span class="n">plot_weeks</span><span class="p">(</span><span class="n">br</span><span class="p">,</span><span class="n">station_key</span><span class="p">[</span><span class="n">br</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># make a function that does all that stuff up there and do it on a random station</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="nb">reload</span><span class="p">(</span><span class="n">mta</span><span class="p">)</span>
+
+<span class="c">#sta = (&#39;R202&#39;,&#39;R042&#39;)</span>
+<span class="n">mta</span><span class="o">.</span><span class="n">plot_timeseries_and_weeklies</span><span class="p">(</span><span class="n">mta</span><span class="o">.</span><span class="n">get_a_random_boothremote</span><span class="p">(</span><span class="n">boothremote_timeseries</span><span class="p">),</span><span class="n">station_key</span><span class="p">)</span>
+<span class="c">#plot_timeseries_and_weeklies((sta,boothremotes[sta]))</span>
+<span class="c">#pprint(boothremotes[sta])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># let&#39;s take the rainbow plot and turn it into averages with error bars</span>
+
+<span class="c"># boothremotes weekly</span>
+<span class="n">br</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">get_a_random_boothremote</span><span class="p">(</span><span class="n">boothremote_timeseries</span><span class="p">)</span>
+<span class="n">station_name</span> <span class="o">=</span> <span class="n">station_key</span><span class="p">[</span><span class="n">br</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="k">print</span> <span class="n">br</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">station_name</span> 
+
+<span class="n">weekly</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">reshape_flat_counts_to_weekly</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">d</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="n">br</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+<span class="k">print</span> <span class="n">weekly</span>
+
+<span class="c"># numpy arrays are awesome! by using the axis parameter you can find the mean of all columns at once.</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="k">print</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">weekly</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">weekly</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c">#so let&#39;s make a plot of the means </span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="n">err</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">sem</span><span class="p">(</span><span class="n">weekly</span><span class="p">)</span>
+<span class="c">#print err</span>
+
+<span class="n">f</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">weekly</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">yerr</span><span class="o">=</span><span class="n">err</span><span class="p">)</span>
+<span class="c">#plt.errorbar(np.arange(7),np.mean(weekly,0),yerr=np.std(weekly,0))</span>
+<span class="c">#a = plt.gca()</span>
+<span class="n">xl</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+<span class="n">xt</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">),[</span><span class="s">&#39;S&#39;</span><span class="p">,</span><span class="s">&#39;S&#39;</span><span class="p">,</span><span class="s">&#39;M&#39;</span><span class="p">,</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;W&#39;</span><span class="p">,</span><span class="s">&#39;R&#39;</span><span class="p">,</span><span class="s">&#39;F&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">])</span>
+<span class="n">tt</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">station_name</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># and let&#39;s turn this into a function</span>
+
+<span class="k">def</span> <span class="nf">plot_avg_weeklies_with_err_bars</span><span class="p">(</span><span class="n">br</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">br</span><span class="p">:</span> 
+        <span class="n">br</span><span class="o">=</span><span class="n">mta</span><span class="o">.</span><span class="n">get_a_random_boothremote</span><span class="p">(</span><span class="n">boothremote_timeseries</span><span class="p">)</span>
+
+    <span class="n">weekly</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">reshape_flat_counts_to_weekly</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">d</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="n">br</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+    <span class="n">err</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">sem</span><span class="p">(</span><span class="n">weekly</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">weekly</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">yerr</span><span class="o">=</span><span class="n">err</span><span class="p">)</span>
+    <span class="n">xl</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+    <span class="n">xt</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">),[</span><span class="s">&#39;S&#39;</span><span class="p">,</span><span class="s">&#39;S&#39;</span><span class="p">,</span><span class="s">&#39;M&#39;</span><span class="p">,</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;W&#39;</span><span class="p">,</span><span class="s">&#39;R&#39;</span><span class="p">,</span><span class="s">&#39;F&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">])</span>
+    <span class="n">tt</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">station_key</span><span class="p">[</span><span class="n">br</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+    <span class="k">return</span> 
+
+<span class="c">#test it</span>
+<span class="n">plot_avg_weeklies_with_err_bars</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># so there is more than one booth remote per station. Let&#39;s see what we can do about that</span>
+
+<span class="c"># we have the station key but it goes the wrong way. let&#39;s change it around so that we are indexing on the station name</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">station_dict</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">boothremote</span><span class="p">,</span><span class="n">station</span> <span class="ow">in</span> <span class="n">station_key</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">station_dict</span><span class="p">[</span><span class="n">station</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">boothremote</span><span class="p">)</span>
+    
+<span class="c">#pprint(dict(station_dict))</span>
+
+<span class="c">#let&#39;s get a random station</span>
+<span class="k">def</span> <span class="nf">get_a_random_station</span><span class="p">():</span>
+    <span class="n">station</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">station_dict</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">station</span>
+<span class="k">print</span> <span class="n">station</span><span class="p">,</span> <span class="n">station_dict</span><span class="p">[</span><span class="n">station</span><span class="p">]</span>
+
+
+<span class="c">#&#39;86 ST&#39; is a good one with lots of booth remotes</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># and let&#39;s alter our function from above to plot all of the booth remotes for a station</span>
+<span class="k">def</span> <span class="nf">plot_all_brs_for_station</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">station</span><span class="p">:</span> 
+        <span class="n">station</span><span class="o">=</span><span class="n">get_a_random_station</span><span class="p">()</span>
+    <span class="n">f</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+    
+    <span class="k">for</span> <span class="n">boothremote</span> <span class="ow">in</span> <span class="n">station_dict</span><span class="p">[</span><span class="n">station</span><span class="p">]:</span>
+        <span class="n">br</span> <span class="o">=</span> <span class="n">boothremote_timeseries</span><span class="p">[</span><span class="n">boothremote</span><span class="p">]</span>
+        <span class="n">weekly</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">reshape_flat_counts_to_weekly</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">d</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="n">br</span><span class="p">])</span>
+        <span class="c">#print boothremote</span>
+        <span class="c">#print weekly</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">weekly</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">yerr</span><span class="o">=</span><span class="n">err</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">boothremote</span><span class="p">)</span>
+        
+    <span class="n">xl</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+    <span class="n">xt</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">),[</span><span class="s">&#39;S&#39;</span><span class="p">,</span><span class="s">&#39;S&#39;</span><span class="p">,</span><span class="s">&#39;M&#39;</span><span class="p">,</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;W&#39;</span><span class="p">,</span><span class="s">&#39;R&#39;</span><span class="p">,</span><span class="s">&#39;F&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">])</span>
+    <span class="n">tt</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">station</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.35</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="c">#lg = plt.figlegend(f,label=station_dict[station],loc=3)</span>
+    <span class="k">return</span> 
+
+<span class="n">plot_all_brs_for_station</span><span class="p">()</span>
+<span class="c">#plot_all_brs_for_station(station=&#39;BOWLING GREEN&#39;)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">stations</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">station</span><span class="p">,</span><span class="n">br_names</span> <span class="ow">in</span> <span class="n">station_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">total_ridership</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">daily_totals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">br_name</span> <span class="ow">in</span> <span class="n">br_names</span><span class="p">:</span> 
+        <span class="n">br</span> <span class="o">=</span> <span class="n">boothremote_timeseries</span><span class="p">[</span><span class="n">br_name</span><span class="p">]</span>
+        <span class="n">weekly</span> <span class="o">=</span> <span class="n">mta</span><span class="o">.</span><span class="n">reshape_flat_counts_to_weekly</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">d</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="n">br</span><span class="p">])</span>
+        <span class="n">weekly_sums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">weekly</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">daily_totals</span> <span class="o">=</span> <span class="n">daily_totals</span><span class="o">+</span><span class="n">weekly_sums</span>
+        <span class="n">total_ridership</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">weekly_sums</span><span class="p">)</span>
+    <span class="n">stations</span><span class="p">[</span><span class="n">station</span><span class="p">]</span><span class="o">=</span><span class="p">{</span>
+    <span class="s">&#39;daily_totals&#39;</span><span class="p">:</span><span class="n">daily_totals</span><span class="p">,</span>
+    <span class="s">&#39;total_ridership&#39;</span><span class="p">:</span><span class="n">total_ridership</span><span class="p">}</span>
+    
+
+        
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">total_ridership</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">station</span><span class="p">,</span><span class="n">br_names</span> <span class="ow">in</span> <span class="n">station_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">total_ridership</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">sum</span><span class="p">([</span><span class="nb">sum</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">d</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="n">boothremote_timeseries</span><span class="p">[</span><span class="n">br_name</span><span class="p">]])</span> <span class="k">for</span> <span class="n">br_name</span> <span class="ow">in</span> <span class="n">br_names</span><span class="p">]),</span><span class="n">station</span><span class="p">))</span>
+    
+<span class="c">#average_weekly_ridership = []</span>
+<span class="c">#for station,br_names in station_dict.items()[:5]:</span>
+    <span class="c">#rect= [[c for d,c in boothremote_timeseries[br_name]] for br_name in br_names]</span>
+    <span class="c">#print len(br_names)</span>
+    <span class="c">#print rect</span>
+
+        
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pprint</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">total_ridership</span><span class="p">))))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">station_totals</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="n">total_ridership</span><span class="p">]</span>
+<span class="c">#print station_totals</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">station_totals</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<pre><code>&lt;/div&gt;
+</code></pre>
+
+<p>  </div>
+</body>
+</html></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-        <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://frrmack.github.io/cool-stuff/index.html" data-via="frrmack" data-counturl="http://frrmack.github.io/cool-stuff/index.html" >Tweet</a>
+
+<span class="byline author vcard">Posted by <span class="fn">Irmak Sirer</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-01-16T19:53:38-05:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>7:53 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://frrmack.github.io/blog/2015/01/16/testing-ipython/" data-via="frrmack" data-counturl="http://frrmack.github.io/blog/2015/01/16/testing-ipython/" >Tweet</a>
   
   
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/blog/2015/01/10/this-blogging-thing-is-pretty-awesome/" title="Previous Post: This blogging thing is pretty awesome">&laquo; This blogging thing is pretty awesome</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
